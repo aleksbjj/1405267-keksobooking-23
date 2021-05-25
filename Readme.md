@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг»
 
 * Студент: [Александр Касьяненко](https://up.htmlacademy.ru/javascript/23/user/1405267).
-* Наставник: [Дмитрий Железцов](https://htmlacademy.ru/profile/sench).
+* Наставник: [Дмитрий Железцов ](https://htmlacademy.ru/profile/sench).
 
 ---
 
