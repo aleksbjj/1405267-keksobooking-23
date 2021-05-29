@@ -1,14 +1,17 @@
-const generateRndNumber = (min = 1, max = 99) => {
-  min[max] = true;
-  return Math.ceil((Math.random() * (max - min)) + min);
+const DEFAULT_MIN_STEP_VALUE = 1;
+const DEFAULT_MAX_STEP_VALUE = 99;
+const DEFAULT_NUMBER_FLOAT_VALUE = 0;
+const generateRandomNumber = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VALUE) => {
+  const result = Math.ceil((Math.random() * (max - min)) + min);
+  return result;
 };
 
-const generateRndNumberFloat = (min = 1, max = 99, numberFloat) => {
-  min[max, numberFloat] = true;
-  return numberFloat ? (Math.random() * (max - min) + min).toFixed(numberFloat) : Math.random() * (max - min) + min;
+const generateRandomNumberFloat = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VALUE, numberFloat = DEFAULT_NUMBER_FLOAT_VALUE) => {
+  const result = Math.random() * (max - min) + min;
+  return result.toFixed(numberFloat);
 };
 
-const getRndNumber = (min, max, numberFloat) => {
+const getRandomNumber = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VALUE, numberFloat = DEFAULT_NUMBER_FLOAT_VALUE) => {
   if (min < 0 || max < 0) {
     return 'Числа не должны быть отрицательные';
   } else if (min > max) {
@@ -16,10 +19,11 @@ const getRndNumber = (min, max, numberFloat) => {
   } else if (min === max) {
     return `Число min-${min} не должно быть равно max-${max}`;
   } else if (numberFloat) {
-    return generateRndNumberFloat(min, max, numberFloat);
-  } else {
-    return generateRndNumber(min, max);
+    return generateRandomNumberFloat(min, max, numberFloat);
+  }
+  else {
+    return generateRandomNumber(min, max);
   }
 };
 
-getRndNumber();
+getRandomNumber();
