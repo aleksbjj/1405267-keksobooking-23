@@ -5,7 +5,7 @@ const X_MIN_COORDINATE = 35.65000;
 const X_MAX_COORDINATE = 35.70000;
 const Y_MIN_COORDINATE = 139.70000;
 const Y_MAX_COORDINATE = 139.80000;
-const COORDIANTE_NUMBER_FLOAT_VALUE = 5;
+const COORDINATE_NUMBER_FLOAT_VALUE = 5;
 const MIN_PRICE = 500;
 const MAX_PRICE = 10000;
 const MAX_AMOUNT_USERS = 8;
@@ -40,17 +40,11 @@ const FEATURES = [
   'elevator',
   'conditioner',
 ];
-const CHECKIN_TIME = [
+const TIMES = [
   '12:00',
   '13:00',
   '14:00',
 ];
-const CHECKOUTS_TIME = [
-  '12:00',
-  '13:00',
-  '14:00',
-];
-
 const ROOMS_AMOUNT = [
   1,
   2,
@@ -72,15 +66,9 @@ const PHOTOS_URLS = [
   'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg',
 ];
 
-const getRandomData = function (arrayName) {
-  return arrayName[Math.floor(Math.random() * arrayName.length)];
-};
+const getRandomData = (arrayName) => arrayName[Math.floor(Math.random() * arrayName.length)];
 
-
-const generateRandomNumber = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VALUE) => {
-  const result = Math.ceil((Math.random() * (max - min)) + min);
-  return result;
-};
+const generateRandomNumber = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VALUE) => Math.ceil((Math.random() * (max - min)) + min);
 
 const generateRandomNumberFloat = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VALUE, numberFloat = DEFAULT_NUMBER_FLOAT_VALUE) => {
   const result = Math.random() * (max - min) + min;
@@ -104,11 +92,11 @@ const getRandomNumber = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VA
 
 getRandomNumber();
 
-const createArrayWithData = function (amountArray = ARRAYDATAAMOUNT) {
+const createArrayWithData = (amountArray = ARRAYDATAAMOUNT) => {
   const array = [];
   for (let idx = 0; idx < amountArray; idx++) {
-    const lat = generateRandomNumberFloat(X_MIN_COORDINATE, X_MAX_COORDINATE, COORDIANTE_NUMBER_FLOAT_VALUE);
-    const lng = generateRandomNumberFloat(Y_MIN_COORDINATE, Y_MAX_COORDINATE, COORDIANTE_NUMBER_FLOAT_VALUE);
+    const lat = generateRandomNumberFloat(X_MIN_COORDINATE, X_MAX_COORDINATE, COORDINATE_NUMBER_FLOAT_VALUE);
+    const lng = generateRandomNumberFloat(Y_MIN_COORDINATE, Y_MAX_COORDINATE, COORDINATE_NUMBER_FLOAT_VALUE);
 
     array.push(
       {
@@ -121,13 +109,13 @@ const createArrayWithData = function (amountArray = ARRAYDATAAMOUNT) {
         },
         offer: {
           title: getRandomData(TITLES),
-          adress: `${lat}, ${lng}`,
+          address: `${lat}, ${lng}`,
           price: generateRandomNumber(MIN_PRICE, MAX_PRICE),
           type: getRandomData(HOUSES_TYPES),
           rooms: getRandomData(ROOMS_AMOUNT),
           guests: getRandomData(GUEST_AMOUNT),
-          checkin: getRandomData(CHECKIN_TIME),
-          checkout: getRandomData(CHECKOUTS_TIME),
+          checkin: getRandomData(TIMES),
+          checkout: getRandomData(TIMES),
           features: getRandomData(FEATURES),
           descriptions: getRandomData(DESCRIPTIONS),
           photos: getRandomData(PHOTOS_URLS),
