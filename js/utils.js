@@ -1,7 +1,4 @@
-const DEFAULT_MIN_STEP_VALUE = 1;
-const DEFAULT_MAX_STEP_VALUE = 99;
-const DEFAULT_NUMBER_FLOAT_VALUE = 0;
-
+import {DEFAULT_MIN_STEP_VALUE,DEFAULT_MAX_STEP_VALUE,DEFAULT_NUMBER_FLOAT_VALUE} from './constants.js';
 
 const generateRandomNumber = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VALUE) => Math.ceil((Math.random() * (max - min)) + min);
 
