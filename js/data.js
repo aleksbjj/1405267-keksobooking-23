@@ -1,6 +1,6 @@
 import {X_MIN_COORDINATE,X_MAX_COORDINATE,Y_MIN_COORDINATE,Y_MAX_COORDINATE,COORDINATE_NUMBER_FLOAT_VALUE,MIN_PRICE,MAX_PRICE,MAX_AMOUNT_USERS,MIN_AMOUNT_USERS,ARRAYDATAAMOUNT} from './constants.js';
 import {TITLES,DESCRIPTIONS,HOUSES_TYPES,FEATURES,TIMES,ROOMS_AMOUNT,GUEST_AMOUNT,PHOTOS_URLS} from './server.js';
-import {getRandomNumber} from './utils.js';
+import {getRandomNumber,getRandomFeatures} from './utils.js';
 
 const getRandomData = (arrayName) => arrayName[Math.floor(Math.random() * arrayName.length)];
 
@@ -28,9 +28,9 @@ const createArrayWithData = (amountArray = ARRAYDATAAMOUNT) => {
           guests: getRandomData(GUEST_AMOUNT),
           checkin: getRandomData(TIMES),
           checkout: getRandomData(TIMES),
-          features: getRandomData(FEATURES),
+          features: getRandomFeatures(FEATURES),
           descriptions: getRandomData(DESCRIPTIONS),
-          photos: getRandomData(PHOTOS_URLS),
+          photos: getRandomFeatures(PHOTOS_URLS),
         },
       },
     );

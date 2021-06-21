@@ -1,3 +1,2 @@
-import { createArrayWithData } from './data.js';
-
-console.log(createArrayWithData());
+import {similarOffers} from './card.js';
+console.log(similarOffers);

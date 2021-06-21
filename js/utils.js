@@ -1,4 +1,4 @@
-import {DEFAULT_MIN_STEP_VALUE,DEFAULT_MAX_STEP_VALUE,DEFAULT_NUMBER_FLOAT_VALUE} from './constants.js';
+import { DEFAULT_MIN_STEP_VALUE, DEFAULT_MAX_STEP_VALUE, DEFAULT_NUMBER_FLOAT_VALUE } from './constants.js';
 
 const generateRandomNumber = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VALUE) => Math.ceil((Math.random() * (max - min)) + min);
 
@@ -24,6 +24,12 @@ const getRandomNumber = (min = DEFAULT_MIN_STEP_VALUE, max = DEFAULT_MAX_STEP_VA
 
 getRandomNumber();
 
-export {getRandomNumber};
+const getRandomFeatures = (items) => {
+  const randomIndex = getRandomNumber(0, items.length - 1);
+  const randomFeatures = items.slice(0, randomIndex + 1);
+  return randomFeatures;
+};
+
+export { getRandomNumber, getRandomFeatures };
 
 
