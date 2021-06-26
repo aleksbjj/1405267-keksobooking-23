@@ -1,4 +1,9 @@
-import { MAX_TITLE_LENGTH, MIN_TITLE_LENGTH, MAX_PRICE_VALUE, RoomsForGuestsMap } from './constants.js';
+import {
+  MAX_TITLE_LENGTH,
+  MIN_TITLE_LENGTH,
+  MAX_PRICE_VALUE,
+  RoomsForGuestsMap
+} from './constants.js';
 const form = document.querySelector('.ad-form');
 const title = form.querySelector('#title');
 const price = form.querySelector('#price');
