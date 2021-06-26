@@ -2,13 +2,17 @@ import {
   MAX_TITLE_LENGTH,
   MIN_TITLE_LENGTH,
   MAX_PRICE_VALUE,
-  RoomsForGuestsMap
+  RoomsForGuestsMap,
+  housesType
 } from './constants.js';
 const form = document.querySelector('.ad-form');
 const title = form.querySelector('#title');
 const price = form.querySelector('#price');
 const roomNumber = form.querySelector('#room_number');
 const capacity = form.querySelector('#capacity');
+const roomType = form.querySelector('#type');
+const timeIn = form.querySelector('#timein');
+const timeOut = form.querySelector('#timeout');
 
 const validateTitle = () => {
   const valueLength = title.value.length;
@@ -36,6 +40,25 @@ const validateRoomsInput = () => {
   capacity.reportValidity();
 };
 
+const processingOfRoomsInputValue = (targetElement) => {
+  for (let idx = 0; idx < housesType.length; idx++) {
+    if (housesType[idx].type === targetElement.value) {
+      price.min = housesType[idx].price;
+      price.placeholder = housesType[idx].price;
+    }
+  }
+};
+
+
+const timeInOut = (targetElement) => {
+  if (timeIn.value !== targetElement.value) {
+    timeIn.value = targetElement.value;
+  } else {
+    timeOut.value = targetElement.value;
+  }
+};
+
+
 const onChangeHandlerForm = (evt) => {
   switch (evt.target) {
     case title:
@@ -48,9 +71,16 @@ const onChangeHandlerForm = (evt) => {
     case capacity:
       validateRoomsInput();
       break;
+    case roomType:
+      processingOfRoomsInputValue(roomType);
+      break;
+    case timeIn:
+      timeInOut(timeIn);
+      break;
+    case timeOut:
+      timeInOut(timeOut);
+      break;
   }
 };
 
 form.addEventListener('input', onChangeHandlerForm);
-
-
