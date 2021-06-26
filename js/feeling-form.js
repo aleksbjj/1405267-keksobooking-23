@@ -49,15 +49,13 @@ const processingOfRoomsInputValue = (targetElement) => {
   }
 };
 
-
-const timeInOut = (targetElement) => {
+const getSynchronizationTime = (targetElement) => {
   if (timeIn.value !== targetElement.value) {
     timeIn.value = targetElement.value;
   } else {
     timeOut.value = targetElement.value;
   }
 };
-
 
 const onChangeHandlerForm = (evt) => {
   switch (evt.target) {
@@ -75,10 +73,10 @@ const onChangeHandlerForm = (evt) => {
       processingOfRoomsInputValue(roomType);
       break;
     case timeIn:
-      timeInOut(timeIn);
+      getSynchronizationTime(timeIn);
       break;
     case timeOut:
-      timeInOut(timeOut);
+      getSynchronizationTime(timeOut);
       break;
   }
 };
