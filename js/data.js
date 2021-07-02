@@ -29,7 +29,7 @@ const createArrayWithData = (amountArray = ARRAYDATAAMOUNT) => {
           checkin: getRandomData(TIMES),
           checkout: getRandomData(TIMES),
           features: getRandomFeatures(FEATURES),
-          descriptions: getRandomData(DESCRIPTIONS),
+          descrsiptions: getRandomData(DESCRIPTIONS),
           photos: getRandomFeatures(PHOTOS_URLS),
         },
       },
