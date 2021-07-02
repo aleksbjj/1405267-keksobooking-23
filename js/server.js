@@ -53,4 +53,4 @@ const PHOTOS_URLS = [
   'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg',
 ];
 
-export { TITLES, DESCRIPTIONS, HOUSES_TYPES, FEATURES, TIMES, ROOMS_AMOUNT, GUEST_AMOUNT, PHOTOS_URLS };
+export { TITLES, DESCRIPTIONS, HOUSES_TYPES, FEATURES, TIMES, ROOMS_AMOUNT, GUEST_AMOUNT, PHOTOS_URLS};

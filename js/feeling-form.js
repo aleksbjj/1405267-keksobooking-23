@@ -13,6 +13,7 @@ const capacity = form.querySelector('#capacity');
 const roomType = form.querySelector('#type');
 const timeIn = form.querySelector('#timein');
 const timeOut = form.querySelector('#timeout');
+const address = form.querySelector('#address');
 
 const validateTitle = () => {
   const valueLength = title.value.length;
@@ -82,3 +83,5 @@ const onChangeHandlerForm = (evt) => {
 };
 
 form.addEventListener('input', onChangeHandlerForm);
+
+export {onChangeHandlerForm, address};
