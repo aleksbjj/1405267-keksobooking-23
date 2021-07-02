@@ -1,9 +1,17 @@
-import { settingInitialMap, mainMarkerSetting, similarMarkerSetting } from './constants.js';
+import {
+  settingInitialMap,
+  mainMarkerSetting,
+  similarMarkerSetting
+} from './constants.js';
+
 import { address } from './feeling-form.js';
+
 import { activateApp, deactivateApp } from './form.js';
+
 import { createArrayWithData } from './data.js';
 
 deactivateApp();
+
 const map = L.map('map-canvas')
   .on('load', activateApp)
   .setView({
@@ -18,12 +26,12 @@ L.tileLayer(
   },
 ).addTo(map);
 
-
 const mainMarkerIcon = L.icon({
   iconUrl: mainMarkerSetting.URL,
   iconSize: [mainMarkerSetting.WIDTH, mainMarkerSetting.HEIGHT],
   iconAnchor: [mainMarkerSetting.WIDTH / 2, mainMarkerSetting.HEIGHT],
 });
+
 const mainMarker = L.marker({
   lat: settingInitialMap.LAT,
   lng: settingInitialMap.LNG,
@@ -71,7 +79,6 @@ const renderSimilarOffersPins = (items) => {
   });
   return points;
 };
-
 
 const similarOffers = createArrayWithData(5);
 
