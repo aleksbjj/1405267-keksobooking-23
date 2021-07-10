@@ -43,6 +43,8 @@ const setMainMarkerInitialPosition = () => {
   address.value = `${mainMarker.getLatLng().lat}, ${mainMarker.getLatLng().lng}`;
 };
 
+setMainMarkerInitialPosition();
+
 const getMainMarkerCurrentPosition = (evt) => {
   const currentLatitude = evt.target.getLatLng().lat.toFixed(5);
   const currentLongitude = evt.target.getLatLng().lng.toFixed(5);
