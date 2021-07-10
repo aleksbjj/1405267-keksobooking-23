@@ -5,7 +5,9 @@ import {
   RoomsForGuestsMap,
   housesType
 } from './constants.js';
+
 const form = document.querySelector('.ad-form');
+const resetFormButton = document.querySelector('.ad-form__reset');
 const title = form.querySelector('#title');
 const price = form.querySelector('#price');
 const roomNumber = form.querySelector('#room_number');
@@ -81,7 +83,6 @@ const onChangeHandlerForm = (evt) => {
       break;
   }
 };
-
 form.addEventListener('input', onChangeHandlerForm);
 
-export {onChangeHandlerForm, address};
+export { onChangeHandlerForm, address, form, resetFormButton };
