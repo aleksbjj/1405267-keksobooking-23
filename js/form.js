@@ -1,4 +1,5 @@
-const deactivateApp = () => {
+
+const deactivatePage = () => {
   const form = document.querySelector('.ad-form');
   form.classList.add('ad-form--disabled');
 
@@ -18,7 +19,7 @@ const deactivateApp = () => {
   mapFilterElement.disabled = true;
 };
 
-const activateApp = () => {
+const activatePage = () => {
   const form = document.querySelector('.ad-form');
   form.classList.remove('ad-form--disabled');
 
@@ -38,4 +39,4 @@ const activateApp = () => {
   mapFilterElement.disabled = false;
 };
 
-export {deactivateApp, activateApp};
+export {deactivatePage, activatePage};
