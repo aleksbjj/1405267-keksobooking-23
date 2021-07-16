@@ -8,6 +8,10 @@ const MAX_PRICE = 10000;
 const MAX_PRICE_VALUE = 1000000;
 const MIN_TITLE_LENGTH = 30;
 const MAX_TITLE_LENGTH = 100;
+const SIMILAR_OFFERS_COUNT = 10;
+const ANY_VALUE = 'any';
+const RADIX = 10;
+const RERENDER_DELAY = 500;
 const RoomsForGuestsMap = {
   1: ['1'],
   2: ['1', '2'],
@@ -51,6 +55,7 @@ const similarMarkerSetting = {
   HEIGHT: 40,
   URL: './img/pin.svg',
 };
+
 export {
-  X_MIN_COORDINATE, X_MAX_COORDINATE, Y_MIN_COORDINATE, Y_MAX_COORDINATE, COORDINATE_NUMBER_FLOAT_VALUE, MIN_PRICE, MAX_PRICE, MAX_PRICE_VALUE, MAX_TITLE_LENGTH, MIN_TITLE_LENGTH, RoomsForGuestsMap, housesType, settingInitialMap, mainMarkerSetting, similarMarkerSetting
+  X_MIN_COORDINATE, X_MAX_COORDINATE, Y_MIN_COORDINATE, Y_MAX_COORDINATE, COORDINATE_NUMBER_FLOAT_VALUE, MIN_PRICE, MAX_PRICE, MAX_PRICE_VALUE, MAX_TITLE_LENGTH, MIN_TITLE_LENGTH, RoomsForGuestsMap, housesType, settingInitialMap, mainMarkerSetting, similarMarkerSetting,SIMILAR_OFFERS_COUNT,ANY_VALUE,RADIX,RERENDER_DELAY
 };
