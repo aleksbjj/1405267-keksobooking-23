@@ -4,10 +4,15 @@ import './map.js';
 import { openSuccessPopup, openErrorPopup } from './popup.js';
 import { getData } from './api.js';
 import { sendData } from './api.js';
-const SIMILAR_OFFER_COUNT = 10;
+import {RERENDER_DELAY} from './utils.js';
+import { SIMILAR_OFFERS_COUNT } from './constants.js';
+import { filterOffers } from './filters.js';
+import { debounce } from './utils/debounce.js';
 
 getData((offers) => {
-  renderPins(offers.slice(0, SIMILAR_OFFER_COUNT));
+  renderPins(offers.slice(0, SIMILAR_OFFERS_COUNT));
+  debounce(filterOffers(offers), RERENDER_DELAY,
+  );
 });
 
 sendData(openSuccessPopup, openErrorPopup);
