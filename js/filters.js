@@ -30,17 +30,17 @@ const filterByRoomsNumber = (item) => filterRoomsNumber.value === ANY_VALUE ? tr
 
 const filterByGuestsNumber = (item) => filterGuestsNumber.value === ANY_VALUE ? true : item.offer.guests === parseInt(filterGuestsNumber.value, RADIX);
 
-const filterByHousingPrice = (ad) => {
+const filterByHousingPrice = (item) => {
   const filteringPriceRange = HousingPriceRange[filterHousingPrice.value.toUpperCase()];
   return filteringPriceRange ? ad.offer.price >= filteringPriceRange.MIN && ad.offer.price <= filteringPriceRange.MAX : true;
 };
 
-const filterByFeatures = (elem) => {
+const filterByFeatures = (item) => {
   const checkedHousingFeatures = filterHousingFeatures.querySelectorAll('.map__checkbox:checked');
 
   return Array.from(checkedHousingFeatures).every((checkedFeature) => {
-    if (elem.offer.features) {
-      return elem.offer.features.includes(checkedFeature.value);
+    if (item.offer.features) {
+      return item.offer.features.includes(checkedFeature.value);
     }
   });
 };
