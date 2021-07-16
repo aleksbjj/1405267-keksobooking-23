@@ -55,7 +55,14 @@ const similarMarkerSetting = {
   HEIGHT: 40,
   URL: './img/pin.svg',
 };
+const FILE_TYPES = ['gif', 'jpg', 'jpeg', 'png'];
+
+const PreviewPhotoSize = {
+  WIDTH: '70',
+  HEIGHT: '70',
+};
 
 export {
-  X_MIN_COORDINATE, X_MAX_COORDINATE, Y_MIN_COORDINATE, Y_MAX_COORDINATE, COORDINATE_NUMBER_FLOAT_VALUE, MIN_PRICE, MAX_PRICE, MAX_PRICE_VALUE, MAX_TITLE_LENGTH, MIN_TITLE_LENGTH, RoomsForGuestsMap, housesType, settingInitialMap, mainMarkerSetting, similarMarkerSetting,SIMILAR_OFFERS_COUNT,ANY_VALUE,RADIX,RERENDER_DELAY
+  X_MIN_COORDINATE, X_MAX_COORDINATE, Y_MIN_COORDINATE, Y_MAX_COORDINATE, COORDINATE_NUMBER_FLOAT_VALUE, MIN_PRICE, MAX_PRICE, MAX_PRICE_VALUE, MAX_TITLE_LENGTH, MIN_TITLE_LENGTH, RoomsForGuestsMap, housesType, settingInitialMap, mainMarkerSetting, similarMarkerSetting, SIMILAR_OFFERS_COUNT, ANY_VALUE, RADIX, RERENDER_DELAY, FILE_TYPES,
+  PreviewPhotoSize
 };

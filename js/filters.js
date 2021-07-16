@@ -32,7 +32,7 @@ const filterByGuestsNumber = (item) => filterGuestsNumber.value === ANY_VALUE ? 
 
 const filterByHousingPrice = (item) => {
   const filteringPriceRange = HousingPriceRange[filterHousingPrice.value.toUpperCase()];
-  return filteringPriceRange ? ad.offer.price >= filteringPriceRange.MIN && ad.offer.price <= filteringPriceRange.MAX : true;
+  return filteringPriceRange ? item.offer.price >= filteringPriceRange.MIN && item.offer.price <= filteringPriceRange.MAX : true;
 };
 
 const filterByFeatures = (item) => {
