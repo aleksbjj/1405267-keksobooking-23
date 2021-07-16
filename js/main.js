@@ -4,7 +4,7 @@ import './map.js';
 import { openSuccessPopup, openErrorPopup } from './popup.js';
 import { getData } from './api.js';
 import { sendData } from './api.js';
-import {RERENDER_DELAY} from './utils.js';
+import {RERENDER_DELAY} from './constants.js';
 import { SIMILAR_OFFERS_COUNT } from './constants.js';
 import { filterOffers } from './filters.js';
 import { debounce } from './utils/debounce.js';
